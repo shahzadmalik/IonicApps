@@ -1,0 +1,18 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{detail.title.rendered}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding> 
+  <ion-card >
+ <!--<img src="{{detail._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url}}" alt="">-->
+    <ion-card-content>
+      <ion-card-title >
+        {{detail.title.rendered}}
+      </ion-card-title>
+      <p [innerHTML]="detail.content.rendered"></p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

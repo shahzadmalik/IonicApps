@@ -1,0 +1,28 @@
+
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>settings</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label>News</ion-label>
+      <ion-toggle [(ngModel)]="news" (ionChange)="changeMe()"></ion-toggle>     
+    </ion-item> 
+    <h1 *ngIf="news">News</h1> 
+    <ion-item>
+        <ion-label>Sports</ion-label>
+        <ion-toggle [(ngModel)]="sports" ></ion-toggle>       
+      </ion-item>  
+      <h1 *ngIf="sports">Sports</h1>
+      <ion-item>
+        <ion-label>First Year</ion-label>
+        <ion-toggle [(ngModel)]="firstyear"></ion-toggle>        
+      </ion-item>
+      <h1 *ngIf="firstyear">Firts Year</h1>
+  </ion-list>
+</ion-content>

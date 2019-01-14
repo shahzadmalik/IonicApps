@@ -10,18 +10,25 @@
 <!--Content -->
 <ion-content > 
   <ion-card *ngFor="let post of posts" (click)="postDetail(post)">
-    <!--<img src="{{post._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url}}" alt=""> -->  
+    <ion-card-header>
+        <img class="card-img" src="{{post._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url}}" alt="image">
+    </ion-card-header>
+
     <ion-card-content>
       <ion-card-title>
         {{post.title.rendered}}
       </ion-card-title>
         <ion-item>
-          <ion-badge item-start>
-            {{getCatName(post.categories[0])}}    
-          </ion-badge>
-          <ion-badge item-end>
-           On: {{post.date | date: "dd:MM:yyyy"}}
-          </ion-badge>
+         <!-- <p [innerHTML]= "post.content.rendered"></p>-->
+    
+           <!-- <ion-badge item-start>
+                {{getCatName(post.categories[0])}}    
+            </ion-badge>-->
+            <ion-badge item-end>
+              Posted On: {{post.date | date: "dd:MM:yyyy"}} 
+            </ion-badge>
+         
+          
         </ion-item>   
     </ion-card-content>
   </ion-card>

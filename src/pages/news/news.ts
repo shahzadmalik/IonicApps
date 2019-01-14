@@ -12,7 +12,7 @@ import {DetailPage} from '../detail/detail'
 })
 export class NewsPage {
   public posts : any = [];
-  private per_page: number = 20;
+  private per_page: number = 5;//number of posts you want to display on one page
   private page: number = 1; // this will show 5 posts in one page
   private showLoadMoreButton = true;
 

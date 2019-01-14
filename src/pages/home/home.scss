@@ -1,8 +1,15 @@
 .ios, .md{
     page-home {
         .custom-icon{
-            font-size:45px;
+            font-size:35px;
             text-align: center;
+        }
+        .content{
+            background-color:#fff;
+        }
+        .header-image{
+           width:100%;
+           height:180px;
         }
         
     }
